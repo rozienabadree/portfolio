@@ -1,0 +1,73 @@
+html {
+    height: 90%;
+    background-color: #f5f5dc;
+    font-family: monospace;
+}
+
+/*box model*/
+/* * {
+    box-sizing: border-box;
+} */
+
+/*margins and padding of body*/
+body {
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+    overflow: scroll;
+    background-color: transparent;
+    /* color: black; */
+}
+
+/* Style the menu */
+.menu {
+    overflow: hidden;
+    border: 2px solid forestgreen;
+    background-color: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+/* Style the buttons that are used to open the menu's content */
+.menu button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+/* Change background color of buttons on hover */
+.menu button:hover {
+    /* background-color: #ddd; */
+    background-color: #c3e6cb;
+}
+
+/* Create an active/current tablink class */
+.menu button.active {
+    background-color: #b0e0b5;
+}
+
+/* Style the page content */
+.pagecontent {
+    display: none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    font-size: 18px;
+    height: 100%;
+}
+
+.form {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+#submit-button button {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+}

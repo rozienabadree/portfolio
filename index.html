@@ -1,27 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Roziena A Badree: Final Portfolio</title>
-  </head>
-  <body>
 
-    This website serves as a final portfolio of my work in computer science at Hunter College but is still under construction. The expected completion date is May 24, 2024. In the meantime, links to my work can be found below.<br><br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Roziena A Badree </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="">
+</head>
 
-    <a href="https://rozienabadree.github.io/drug-scanner/">Drug-Scanner: A Solution to Counterfeit Drugs (some functionality and the mobile application itself has been removed)</a> <br><br>
+<body>
+  <header>
+    <center>
+      <h1>Welcome!</h1>
+    </center>
+    <div class="menu">
+      <button class="tablink" onclick="openPage('main', this)" id="defaultOpen">Home</button>
+      <button class="tablink" onclick="openPage('projects', this)">Comp Sci Projects</button>
+      <button class="tablink" onclick="openPage('teaching', this)">Teaching</button>
+      <button class="tablink" onclick="openPage('contact', this)">Contact</button>
+    </div>
+  </header>
 
-    <a href="https://github.com/rozienabadree/compound-protein-interaction">Compound-Protein Interaction: Exploration of two state-of-the-art techniques for predicting CPI and binding affinity: a bi-directional attention neural network
-    and a language model named ESM-2 developed by Meta using Python.</a> <br><br>
+  <!-- Homepage -->
+  <div id="main" class="pagecontent">
+    <h2>Thank you for visiting!</h2>
+    <p>My computer science journey began in 2008 when I was an undergraduate student at Stony Brook University. I took
+      an `Intro to Programming` course as Biomedical Engineering student and never thought much of it. Then, in the fall
+      of 2016, I re-discovered Computer Science while taking courses at LaGuardia Community College (LaGCC) and fell in
+      love.</p>
+    <p>Within this site, you will find a collection of my projects from LaGCC and Hunter College (HC), each representing
+      a milestone in my journey (although some may require updates). I encourage you to explore my work through the menu
+      — I believe each project has its own story to tell, and I hope you enjoy reading them as much as I have enjoyed
+      creating them.</p>
+    <p>Lastly, a sincere thank you to the staff at LaGCC and HC. I am deeply grateful for their invaluable guidance and
+      for giving me the opportunity to teach (something else that I never thought I would enjoy doing). It's been an
+      incredibly fulfilling and rewarding experience.</p>
+    <p>Thank you for visiting.</p>
+  </div>
 
-    <a href="https://rozienabadree.github.io/projectcsci39542.github.io/">Data Analysis of Uber vs Yellow Taxi Rides in NYC: Should Uber be Capped in NYC?</a> <br><br>
-
-    <b><em>To be posted soon:</em></b>
+  <!-- Projects -->
+  <div id="projects" class="pagecontent">
+    <h2>Projects (links coming soon!)</h2>
     <ul>
-      <li>Fingerprinting OpenVPN</li>
-      <li>Using ParaView to Visualize Air Quality Data in NYC</li>
-      <li>Teaching Computer Theory (entire course)</li>
-      <li>Solutions to C++ for Scientists & Engineers (the book that made me fall in love with programming)</li>
-      <li>The Coffee Shop Simulation</li>
+      <li><a href="#c++">Bronson Textbook Solutions</a></li>
+      <li><a href="#uber">Uber vs The Yellow Taxi</a></li>
+      <li><a href="#database">An Affordable Housing Database</a></li>
+      <li><a href="#drug-scanner">Drug-Scanner</a></li>
+      <li><a href="#cpi">Compound-Protein Interactions</a></li>
+      <li><a href="#openvpn">Fingerprinting OpenVPN</a></li>
+      <li><a href="#coffee">A Coffee Shop Business Simulation</a></li>
+      <li><a href="#air">ParaView for Visualizing Air Quality Data</a></li>
     </ul>
-  </body>
+  </div>
+
+  <!--         <a href="https://rozienabadree.github.io/drug-scanner/">Drug-Scanner: A Solution to Counterfeit Drugs (some
+            functionality and the mobile application itself has been removed)</a> <br><br>
+        
+        <a href="https://github.com/rozienabadree/compound-protein-interaction">Compound-Protein Interaction: Exploration of two
+            state-of-the-art techniques for predicting CPI and binding affinity: a bi-directional attention neural network
+            and a language model named ESM-2 developed by Meta using Python.</a> <br><br> -->
+
+  <!-- Teaching -->
+  <div id="teaching" class="pagecontent">
+    <h2>Teaching</h2>
+  </div>
+
+  <!-- My contact me page -->
+  <div id="contact" class="pagecontent">
+    <h3>If you have any inquiries, please fill out and submit the form below.</h3>
+    <br>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="https://formspree.io/f/xgegdwzb" method="POST">
+      <div class="contact-form">
+        <label>Your email:<br>
+          <input type="email" name="email">
+        </label>
+        <br><br>
+      </div>
+      <div class="contact-form">
+        <label>Your message:<br>
+          <textarea name="message" rows="10" cols="50"></textarea>
+        </label>
+        <br><br>
+      </div>
+      <!-- your other form fields go here -->
+      <div id="submit-button">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // For the menu
+    function openPage(pageName, elmnt) {
+      // Hide all elements with class="pagecontent" by default
+      var i, pagecontent, tablinks;
+      pagecontent = document.getElementsByClassName("pagecontent");
+      for (i = 0; i < pagecontent.length; i++) {
+        pagecontent[i].style.display = "none";
+      }
+      // Show the specific tab content
+      document.getElementById(pageName).style.display = "block";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
 </html>
