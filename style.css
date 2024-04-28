@@ -22,7 +22,7 @@ body {
 /* Style the menu */
 .menu {
     overflow: hidden;
-    border: 2px solid forestgreen;
+    border: 3px solid forestgreen;
     background-color: white;
     font-family: monospace;
     font-size: 20px;
@@ -60,6 +60,43 @@ body {
     border-top: none;
     font-size: 18px;
     height: 100%;
+}
+
+/* Apply forest green gridlines to the table */
+table {
+    border-collapse: collapse;
+    border: 2px solid forestgreen;
+    /* Forest green border */
+    width: 70%;
+    /* Ensure the table fills its container */
+}
+
+/* Apply forest green gridlines to table cells */
+td, th {
+    border: 2px solid forestgreen;
+    /* Forest green border */
+    padding: 5px;
+    /* Add padding for cell content */
+}
+
+/* Apply fixed widths to table columns */
+th:nth-child(1) {
+    width: 25%;                               
+    /* Auto width for the first column */
+}
+
+th:nth-child(2) {
+    width: 5%;
+    /* Fixed width for the second column */
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+th:nth-child(3) {
+    width: 40%;
+    /* Fixed width for the third column */
 }
 
 .form {
